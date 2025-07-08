@@ -21,11 +21,11 @@ os.environ["USER_AGENT"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKi
 # It's not good practice to hardcode API keys directly in the script like this.
 # The getpass.getpass() is meant to prompt the user, not be pre-filled with the key.
 # If you want to set it without a prompt, simply assign it:
-# os.environ["GOOGLE_API_KEY"] = "AIzaSyD1thkapG6ZV4Ih7SfJQDUiqmLojzVvoGw"
+# os.environ["GOOGLE_API_KEY"] = ""
 # However, for security, it's best to set it as a true environment variable outside the script
 # or use a proper secrets management system.
 if not os.environ.get("GOOGLE_API_KEY"):
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyD1thkapG6ZV4Ih7SfJQDUiqmLojzVvoGw" # Use a generic prompt
+    os.environ["GOOGLE_API_KEY"] = "XXXXXXXXXXX" # Use a generic prompt
 
 # Initialize the embedding model, explicitly passing the API key
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=os.environ["GOOGLE_API_KEY"])
